@@ -2,9 +2,18 @@ from openai import OpenAI
 
 client = OpenAI()
 
-def chat_with_gpt():
-    print("ChatGPT Agent (type 'quit' to exit)\n")
+def chat_video():
+    link = input("Paste the link to the video: ")
+    with open(link, "rb") as audio_file:
+    transcript = client.audio.transcriptions.create(
+        model="gpt-4o-mini-transcribe",  # Whisper model
+        file=audio_file
+    )
+    return ("Transcription:", transcript.text)
 
+def chat_with_gpt():
+    print("Welcome to Calorie Tracking AI. This is the agent. Paste a recipe into the agent, and we will return the total calorie and macro breakdown. Enter Q to quit. First, enter T or V for test-based or video-based recipe breakdowns.")
+    
     # Conversation history
     messages = [
         {"role": "system", "content": "You are a assistant who parses through recipes and returns the total nutrition facts of the recipe. Return calorie, protein, fat, and carbohydrate content."}
@@ -13,9 +22,17 @@ def chat_with_gpt():
     while True:
         user_input = input("You: ")
 
-        if user_input == "Q":
+        if user_input == "V":
+            user_input = chat_video()
+        elif user_input == "T":
+            print("Paste the recipe below.")
+            user_input = input("You: ")
+        elif user_input == "Q":
             print("Thanks for chatting")
             break
+        else:
+            print("Please input a valid option.")
+            continue
 
         # Add user message
         messages.append({"role": "user", "content": user_input})
@@ -32,8 +49,10 @@ def chat_with_gpt():
 
         # Add assistant reply to history
         messages.append({"role": "assistant", "content": reply})
+    
+        
+    
 
 if __name__ == "__main__":
-    print("Welcome to Calorie Tracking AI. This is the agent. Paste a recipe into the agent, and we will return the total calorie and macro breakdown. Enter Q to quit")
     chat_with_gpt()
 
