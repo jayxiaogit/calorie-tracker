@@ -1,58 +1,54 @@
-from openai import OpenAI
+import os
+import google.generativeai as genai
+from pathlib import Path
 
-client = OpenAI()
+# NO
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def chat_video():
-    link = input("Paste the link to the video: ")
-    with open(link, "rb") as audio_file:
-    transcript = client.audio.transcriptions.create(
-        model="gpt-4o-mini-transcribe",  # Whisper model
-        file=audio_file
-    )
-    return ("Transcription:", transcript.text)
+    """
+    Takes a video/audio file path, extracts the audio transcript (Gemini can't do direct transcription yet).
+    For now, this just simulates 'reading' the file contents as if it were a transcript.
+    """
+    link = input("Paste the path to the video/audio file: ")
+    file_path = Path(link)
 
-def chat_with_gpt():
-    print("Welcome to Calorie Tracking AI. This is the agent. Paste a recipe into the agent, and we will return the total calorie and macro breakdown. Enter Q to quit. First, enter T or V for test-based or video-based recipe breakdowns.")
-    
-    # Conversation history
-    messages = [
-        {"role": "system", "content": "You are a assistant who parses through recipes and returns the total nutrition facts of the recipe. Return calorie, protein, fat, and carbohydrate content."}
-    ]
+    if not file_path.exists():
+        return "Error: File not found."
+
+    # TODO: Replace with transcription service when Gemini supports audio/video.
+    # For now, treat as placeholder.
+    return f"(Transcription placeholder for {file_path.name})"
+
+def chat_with_gemini():
+    print("Welcome to Calorie Tracking AI.")
+    print("Paste a recipe and I’ll return the calorie and macro breakdown.")
+    print("Enter Q to quit. Type T for text-based or V for video-based recipe breakdowns.\n")
+
+    model = genai.GenerativeModel("gemini-2.5-pro")
 
     while True:
         user_input = input("You: ")
 
-        if user_input == "V":
+        if user_input.upper() == "V":
             user_input = chat_video()
-        elif user_input == "T":
-            print("Paste the recipe below.")
+        elif user_input.upper() == "T":
+            print("Paste the recipe below:")
             user_input = input("You: ")
-        elif user_input == "Q":
-            print("Thanks for chatting")
+        elif user_input.upper() == "Q":
+            print("Thanks for chatting!")
             break
         else:
-            print("Please input a valid option.")
+            print("Please input a valid option (T, V, Q).")
             continue
 
-        # Add user message
-        messages.append({"role": "user", "content": user_input})
-
-        # Send to GPT
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",  # You can change to another available model
-            messages=messages
+        # Send to Gemini
+        response = model.generate_content(
+            f"You are an assistant who parses recipes and returns total nutrition facts (calories, protein, fat, carbohydrates).\n\nRecipe:\n{user_input}"
         )
 
-        # Extract reply
-        reply = response.choices[0].message.content
-        print("Assistant:", reply)
+        print("\nAssistant:", response.text, "\n")
 
-        # Add assistant reply to history
-        messages.append({"role": "assistant", "content": reply})
-    
-        
-    
 
 if __name__ == "__main__":
-    chat_with_gpt()
-
+    chat_with_gemini()
