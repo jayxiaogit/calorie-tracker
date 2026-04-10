@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DD215535504B17928FE2BB1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9730A519DF62ED40980B85 /* DashboardView.swift */; };
+		4376EA2065C73A34692119DD /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 97C79630E6207D966259F43E /* GoogleGenerativeAI */; };
+		5E20BCC6DAF1CB2BC7B9CE73 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573A287BD07264AAD5E7B0AB /* AddFoodView.swift */; };
+		77BCB60EA88750E7CB9C8532 /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37261CF50AA813F905CCACAE /* GeminiService.swift */; };
+		7B5B29A713644F44F97287BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66C2CA102FDC2DAFC63E8D /* ContentView.swift */; };
+		9B216A23FA503678596435CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E15FA4F36FB0A7B6B17B52 /* SettingsView.swift */; };
+		B6C66D15F910D77D46F071C6 /* FoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781F2B3F62189038D7A49468 /* FoodEntry.swift */; };
+		C557DA86D8AA91C30562042A /* FoodLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2281467F6119A2390CD4F6D2 /* FoodLogView.swift */; };
+		F55D947F2FDF96116A028AE4 /* CalorieTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287F3CF7D79D988F48324BD /* CalorieTrackerApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D8877BBA2658B0567C64B9A /* CalorieTracker.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CalorieTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2281467F6119A2390CD4F6D2 /* FoodLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogView.swift; sourceTree = "<group>"; };
+		37261CF50AA813F905CCACAE /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		573A287BD07264AAD5E7B0AB /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
+		5C66C2CA102FDC2DAFC63E8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6E9730A519DF62ED40980B85 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		781F2B3F62189038D7A49468 /* FoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEntry.swift; sourceTree = "<group>"; };
+		9287F3CF7D79D988F48324BD /* CalorieTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTrackerApp.swift; sourceTree = "<group>"; };
+		98E15FA4F36FB0A7B6B17B52 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25328C2758701E3461865231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4376EA2065C73A34692119DD /* GoogleGenerativeAI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F6A9466DD09F80EEE2DF6DD = {
+			isa = PBXGroup;
+			children = (
+				5462F9E557984DF1E157E9A4 /* Sources */,
+				51784D51C55F17F2CE626A66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51784D51C55F17F2CE626A66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D8877BBA2658B0567C64B9A /* CalorieTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5405037F8B4B142D68618E0E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				37261CF50AA813F905CCACAE /* GeminiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5462F9E557984DF1E157E9A4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6DCC6F4A16B098400F700AA7 /* App */,
+				593438C1B1C0C027FC1483AC /* Models */,
+				5405037F8B4B142D68618E0E /* Services */,
+				94FD1435E830A5DE92A7113A /* Utilities */,
+				A60DE97DD8188C37B99083BC /* ViewModels */,
+				C26486793EFD4B16EBF36436 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		593438C1B1C0C027FC1483AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				781F2B3F62189038D7A49468 /* FoodEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6DCC6F4A16B098400F700AA7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9287F3CF7D79D988F48324BD /* CalorieTrackerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		94FD1435E830A5DE92A7113A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A60DE97DD8188C37B99083BC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C26486793EFD4B16EBF36436 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				573A287BD07264AAD5E7B0AB /* AddFoodView.swift */,
+				5C66C2CA102FDC2DAFC63E8D /* ContentView.swift */,
+				6E9730A519DF62ED40980B85 /* DashboardView.swift */,
+				2281467F6119A2390CD4F6D2 /* FoodLogView.swift */,
+				98E15FA4F36FB0A7B6B17B52 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		328EE4E3852D96A6CD688FD0 /* CalorieTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED8B6A0984A67793C83A32A /* Build configuration list for PBXNativeTarget "CalorieTracker" */;
+			buildPhases = (
+				EEEBB93826A3C5E62AEDA0C6 /* Sources */,
+				25328C2758701E3461865231 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalorieTracker;
+			packageProductDependencies = (
+				97C79630E6207D966259F43E /* GoogleGenerativeAI */,
+			);
+			productName = CalorieTracker;
+			productReference = 0D8877BBA2658B0567C64B9A /* CalorieTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DACAFB4BE3FF8760DA0BAE36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					328EE4E3852D96A6CD688FD0 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E9D16DCA08F02FCB8F78E052 /* Build configuration list for PBXProject "CalorieTracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2F6A9466DD09F80EEE2DF6DD;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C9D85B6C4F3A05FD4B37E7DD /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 51784D51C55F17F2CE626A66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				328EE4E3852D96A6CD688FD0 /* CalorieTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEEBB93826A3C5E62AEDA0C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E20BCC6DAF1CB2BC7B9CE73 /* AddFoodView.swift in Sources */,
+				F55D947F2FDF96116A028AE4 /* CalorieTrackerApp.swift in Sources */,
+				7B5B29A713644F44F97287BD /* ContentView.swift in Sources */,
+				2DD215535504B17928FE2BB1 /* DashboardView.swift in Sources */,
+				B6C66D15F910D77D46F071C6 /* FoodEntry.swift in Sources */,
+				C557DA86D8AA91C30562042A /* FoodLogView.swift in Sources */,
+				77BCB60EA88750E7CB9C8532 /* GeminiService.swift in Sources */,
+				9B216A23FA503678596435CC /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1CBA350FC67B0A96093EE082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.calorietracker.app;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C900790C37A1E9D60BE3BE22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.calorietracker.app;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF43BB79EDD77F6FDD9FB5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		EEAAF43FFB5A7B7A3BF1C2DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AED8B6A0984A67793C83A32A /* Build configuration list for PBXNativeTarget "CalorieTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBA350FC67B0A96093EE082 /* Debug */,
+				C900790C37A1E9D60BE3BE22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E9D16DCA08F02FCB8F78E052 /* Build configuration list for PBXProject "CalorieTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEAAF43FFB5A7B7A3BF1C2DA /* Debug */,
+				DF43BB79EDD77F6FDD9FB5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9D85B6C4F3A05FD4B37E7DD /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97C79630E6207D966259F43E /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9D85B6C4F3A05FD4B37E7DD /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DACAFB4BE3FF8760DA0BAE36 /* Project object */;
+}
